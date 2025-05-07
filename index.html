@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section>
+        <div class="left-section">
+
+            <div class="logo">
+                <img class="logo__odin" src="./images/odin-lined.png" width="100px" height="80%" alt="">
+                <h1 class="logo__text">Odin</h1>
+            </div>
+            <p class="image-credit" >Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></p>
+        </div>
+
+        <div class="right-section">
+
+            <div class="intro padding-utility">
+                <h2>This is not a real online service! You know you need something <br>
+                    like this in your life to help you realize your deepest dreams. <br>
+                    Sign up now to get started.</h2>
+                <h2>You <i>know</i> you want to.</h2>
+            </div>
+
+            <form action="" method="post" class="form-control">
+                <div class="form__body padding-utility">
+                    <div class="form__heading">
+                        <h2>Let's do this!</h2>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <label for="first_name">FIRST NAME</label>
+
+                            <input required type="text" name="first_name" id="first_name">
+                        </div>
+                        <div>
+                            <label for="last_name">LAST NAME</label>
+
+                            <input required type="text" name="last_name" id="last_name" minlength="1">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <label for="email">EMAIL</label>
+                            <input required 
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="e.g. email@address.com"
+                            >
+                        </div>
+                        <div>
+                            <label for="phone_number">PHONE NUMBER</label>
+
+                            <input 
+                                type="tel" name="phone_number"
+                                title="Please insert valid phone number e.g. 0761234567" id="phone_number"
+                                pattern="[0-9]{10}"
+                                min="0"
+                                max="9"
+                                maxlength="10"
+                                placeholder="e.g. 0761234567">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <label for="password">PASSWORD</label>
+                            <input required type="password" name="password" id="password" minlength="5" placeholder="Must be at least 5 characters">
+                        </div>
+                        <div>
+                            <label for="confirm_password">CONFIRM PASSWORD</label>
+                            <input required type="password" name="confirm_password" id="confirm_password" placeholder="Must be at least 5 characters" minlength="5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="create-account padding-utility"><button type="submit">Creaton Account</button>
+                </div>
+
+            </form>
+
+            <div class="log-in padding-utility">
+                <p>Already have an account? <a href=#>Log in</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

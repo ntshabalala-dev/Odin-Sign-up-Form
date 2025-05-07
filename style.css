@@ -1,0 +1,239 @@
+@import "node_modules/modern-normalize/modern-normalize.css";
+
+section {
+    display: flex;
+    height: 100svh;
+}
+
+body {
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.left-section {
+    flex: .8;
+    position: relative;
+    background-image: url("./images/sidebar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Add semi-transparent overlay for text readability: */
+.left-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.left-section>* {
+    position: relative;
+    z-index: 2;
+    color: #ccc;
+}
+
+.left-section p {
+    text-align: center;
+}
+
+.logo {
+    /* (0 - 1024)22rem,  (1024 - 2560) 78rem*/
+    width: 100%;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 10rem;
+    /* top: clamp(22rem, -15.33312rem + 58.333vw, 78rem); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.padding-utility {
+    padding: 0 2rem;
+}
+
+.right-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.row>* {
+    display: inline-block;
+}
+
+.form-control .row div:last-child {
+    margin-left: 3rem;
+}
+
+.row~.row {
+    margin-top: 1.5rem;
+}
+
+.form__body {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.intro {
+    /* padding-top: clamp(5rem, 3.44271rem + 6.557vw, 10rem); */
+    /* padding-top: clamp(5rem, 1.93554rem + 12.903vw, 10rem); */
+    /* padding-top: clamp(5rem, 1.875rem + 10vw, 10rem); */
+    /* padding-top: clamp(5rem, -10rem + 20vw, 10rem); */
+    /* padding-top: clamp(3rem, -1.13036rem + 17.391vw, 10rem); */
+    /* padding-top: clamp(3rem, 1.81986rem + 4.969vw, 5rem); */
+    /* padding-top: clamp(5rem, -3.33313rem + 13.333vw, 10rem); */
+    /* padding-top: clamp(1rem, -1.80321rem + 11.803vw, 10rem); */
+    /* padding-top: clamp(1rem, -1.80321rem + 11.803vw, 10rem); */
+    /* padding-top: clamp(2rem, -0.49185rem + 10.492vw, 10rem); */
+    /* padding-top: clamp(1rem, -0.24593rem + 5.246vw, 5rem); */
+    /* padding-top: clamp(1rem, -1.11114rem + 8.889vw, 10rem); */
+    /* padding-top: clamp(1rem, -2rem + 9.6vw, 10rem); */
+    /* padding-top: clamp(1rem, -3.09094rem + 13.091vw, 10rem); */
+    /* padding-top: clamp(1rem, -0.24593rem + 5.246vw, 5rem); */
+
+    /* padding-top: clamp(1rem, -3.875rem + 12vw, 10rem); */
+    /* padding-top: 10rem; */
+    padding-bottom: 1.8rem;
+}
+
+.create-account {
+    margin-top: 1.7rem;
+}
+
+.create-account button {
+    padding: 0.5rem 2rem;
+    background-color: #596d48;
+    color: #fff;
+    border-radius: 0.4rem;
+    font-weight: 700;
+
+    border: none;
+}
+
+.log-in {
+    padding-top: 0.7rem;
+}
+
+.create-account,
+.log-in {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.log-in a {
+    text-decoration: none;
+    color: #596d48;
+}
+
+.log-in a:hover {
+    /* text-decoration: none; */
+    color: #42800c;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+    transform: translateY(-2px);
+    text-decoration: underline;
+}
+
+.create-account button:hover {
+    opacity: 0.9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* input:valid {
+    border: 2px solid green;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* input:invalid {
+    border: 2px solid red;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* Style for when placeholder is visible */
+/* input:placeholder-shown {
+    border: 1px solid lightgray;
+} */
+
+#confirm_password:invalid:not(:focus),
+#password:invalid:not(:focus) {
+    border: 1px solid red;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#confirm_password:valid:not(:focus),
+#password:valid:not(:focus) {
+    border: 1px solid green;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    padding-left: 0.3rem;
+    max-height: 1.5rem;
+    padding-block: 0.6rem;
+    width: 200px;
+    font-size: 0.7rem;
+    font-weight: 450;
+    border-radius: 0.2rem;
+    border: 1px solid lightgray;
+}
+
+input:focus {
+    outline: none;
+    /* Removes the default outline */
+    border: 1px solid blue;
+}
+
+img {
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: "Norse";
+    src: url("./fonts/Norse/Norse-Bold.otf") format("open-type") url("./fonts/Norse/Norse-Bold.woff2") format("woff2"),
+        url("./fonts/Norse/Norse-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.logo__text {
+    font-family: "Norse", sans-serif;
+    font-size: 5rem;
+}
+
+.image-credit,
+.image-credit a,
+.logo__text {
+    color: #fff;
+}
+
+@media (min-width: 1200px) {
+    .left-section {
+        flex: .5;
+    }
+
+}
